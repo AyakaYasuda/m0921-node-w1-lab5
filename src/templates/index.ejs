@@ -18,7 +18,9 @@
         <td><%= todo.Title %></td>
         <td>
           <a href="/edit/<%= todo.ID %>" class="btn btn-sm btn-warning">Edit</a>
-          <a href="/delete/<%= todo.ID %>" class="btn btn-sm btn-danger">Delete</a>
+          <form action="/delete/<%= todo.ID %>" method="post">
+            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+          </form>
         </td>
       </tr>
       <% } %>

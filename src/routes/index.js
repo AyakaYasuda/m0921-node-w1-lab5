@@ -55,7 +55,7 @@ router.post("/edit/:id", (req, res) => {
   res.redirect("/");
 });
 
-router.get("/delete/:id", (req, res) => {
+router.post("/delete/:id", (req, res) => {
   const sql = "DELETE FROM Todos WHERE ID = ?";
   const id = [req.params.id];
 
